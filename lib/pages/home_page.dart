@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../theme/theme_provider.dart';
 import '../theme/dark_mode.dart';
 import '../theme/light_mode.dart';
+import '../util/habit_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,6 +27,15 @@ class HomePage extends StatelessWidget {
                     ).toggleTheme(),
           ),
         ),
+      ),
+      body: ListView(
+        children: [
+          HabitTile(title: 'Morning Workout'),
+          HabitTile(title: 'Read 30 minutes'),
+          HabitTile(title: 'Meditation'),
+          HabitTile(title: 'Drink 2L of water'),
+          HabitTile(title: 'Learn Flutter'),
+        ],
       ),
     );
   }
